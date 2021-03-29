@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4- Formularios</title>
+</head>
+<body>
+    <header>
+    </header>
+
+    <main>
+        <!--
+            action = url a donde se mandan los datos del formulario
+            GET = Los datos se mandan en el URL
+            POST = Los datos se mandan con la pagina (body)
+
+            POST
+                universidad=IPN 
+                escuela=UPIIZ
+                ramaconocimiento=2 si se selecciona la rama 2
+                grado=3 si selecciona el grado 3
+                estatus=8
+                promedio=8
+                semestre=4
+            GET 
+                URL?universidad=IPN&escuela=ESCOM&ramaconocimiento=2&grado=3&estatus=1&promedio=8&semestre=4
+        -->
+
+        <form action="registro.php" method="GET"> <!--etiqueta para la formularios-->
+            <table align="center">
+                <tr>
+                    <!--etiqueta y entrada de texto de universidad-->
+                    <td><label for="universidad">Universidad: </label></td>
+                    <td><input type="text" name="universidad" id="universidad" value=""></td>
+                </tr>
+
+                <tr>
+                    <!--etiqueta y entrada de texto de escuela-->
+                    <td><label for="escuela">Esculea:</label></td>
+                    <td><input type="text" name="escuela" id="escuela" value=""></td>
+                </tr>
+
+                <tr>
+                    <!--etiqueta y seleccion de opciones de ramaconocimientos-->
+            <!--
+                base de datos = tabla ramaconocimiento
+                id autoincrement,
+                descripcion text
+                Cuando los valores o datos que se desean optener, generalmente estan dentro de una base de datos
+
+                (id) 1 Fisico - matematico
+                (id) 2 Quimico - Biologicas
+                (id) 3 Ciencias - Sociales
+            -->
+                    <td><label for="ramaconocimiento">Rama</label></td>
+                    <td>
+                        <select name="ramaconocimiento" id="ramaconocimiento">
+                            <option value="1">Fisico - Matematico</option> <!--se le agrega un valor para identificar con el value-->
+                            <option value="2">Quimico - Biologicas </option>
+                            <option value="3">Ciencias - Sociales</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                     <!--etiqueta y seleccion de opciones de Grado-->
+                    <td><label for="grado">Grado:</label></td>
+                    <td>
+                        <select name="grado" id="grado">
+                            <option value="1">Doctorado</option>
+                            <option value="2">Maestria</option>
+                            <option value="3">Especialidad</option>
+                            <option value="4">Licenciatura</option>
+                            <option value="5">Nivel Medio Superior</option>
+                        </select>
+
+                        <label>
+                            <!--ambas label deben tener el mismo name, para que solo se seleccione una de las dos opciones-->
+                            <input type="radio" value="1" name="estatus" id="estatus">Incompleto
+                        </label>
+                        
+                        <label>
+                            <input type="radio" value="2" name="estatus" id="estatus"> Completo
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="promedio">Promedio</label></td>
+                    <td>
+                        <input type="number" name="promedio" id="promedio" min="1" max="10">
+                        <label>
+                            <input type="number" name=semestre id="semestre" min="1">Semestre
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Experiencia:</label></td>
+                    <td>
+                        <label>
+                            <input type="number" name="experiencia" id="experiencia" min="0">Anios
+                        </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label>Pagina web:</label></td>
+                    <td><input type="url" name="sitioweb" id="sitioweb" value="http://"> </td>
+                </tr>
+
+                <tr>
+                    <td><input type="submit" value="Registrarse"></td> <!--submit es un boton que envia el resultado-->
+                    <td><input type="reset" value="Limpiar campos"></td> <!--reset limpia las casillas rellenadas-->
+                    <td><input type="button" value="Boton generico"></td> <!--El button se le asigna lo que queramos que haga-->
+                </tr>
+
+            </table>
+
+        </form>
+
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
