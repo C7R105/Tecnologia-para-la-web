@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina 4</title>
+</head>
+<body>
+
+    <header>
+
+    </header>
+
+    <main>
+        <h1 align="center"> CATÁLOGO DE ARTE </h1>
+        <p><b>Introduce los terminos de busqueda</b></p>
+        
+        <form action="registro.php" method="GET">
+            <table align="center">
+                
+                <td></td> <!--Campo vacio-->
+
+                <th>
+                    <p>OBRA</p>
+                </th>
+                <th>
+                    <p>TIPO</p>
+                </th>
+                <th>
+                    <p>DISPONIBILIDAD</p>
+                </th>
+                <th>
+                    <p>ESTILO</p>
+                </th>
+
+                <tr>
+                    <td><label for="Titulo">Titulo:</label></td>
+                    <td><input type="text" name="Titulo" id="Titulo" value=""></td>
+                    
+                    <td>
+                    <label>
+                        <input type="checkbox" value="1" name="tipo" id="tipo">Escultura<br>
+                    </label>
+                     </td>
+
+                    <td>
+                        <label>
+                            <input type="radio" value="1" name="estatus" id="estatus"> Museo/Acceso público<br>
+                        </label>
+                    </td>
+
+                    <td>
+                        <select name="clasico" id="clasico">
+                            <option value="1">Clásico</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="autor">Autor:</label></td>
+                    <td><input type="text" name="Autor" id="Autor" value=""></td>
+                    <td>
+                        <label>
+                            <input type="checkbox" value="1" name="tipo" id="tipo">Arquitectura<br>
+                        </label>
+                        <label>
+                            <input type="checkbox" value="1" name="tipo" id="tipo">Pintura<br>
+                        </label>
+                    </td>
+                    
+                    <td>
+                        <label>
+                            <input type="radio" value="1" name="estatus" id="estatus"> Colección privada<br>
+                        </label>               
+                    </td>
+                </tr>
+                
+            </table>
+
+        </form>
+
+    </main>
+    
+    <footer>
+        <table>
+            <tr>
+                <td><label><b>Háganos saber sus sugerencias:</b></label></td>
+                <td><textarea name="textarea" rows="3" cols="50">Me gustaria indiar que...</textarea></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="Buscar"></td> <!--El button se le asigna lo que queramos que haga-->
+            </tr>
+        </table>
+    </footer>
+
+    <a href="examen2_CICT.html">Link para regresar a la página principal</a>
+    
+</body>
+</html>
