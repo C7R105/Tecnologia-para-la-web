@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta content="" name="description" />
+    <meta content="webthemez" name="author" />
+    <title>Inicio</title>
+    <!-- Bootstrap Styles-->
+    <link href="../plantilla_3/assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FontAwesome Styles-->
+    <link href="../plantilla_3/assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- Morris Chart Styles-->
+    <link href="../plantilla_3/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <!-- Custom Styles-->
+    <link href="../plantilla_3/assets/css/custom-styles.css" rel="stylesheet" />
+    <!-- Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="../plantilla_3/assets/js/Lightweight-Chart/cssCharts.css"> 
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+
+                <a class="navbar-brand" href="../plantilla_3/index.html"><strong>Electivas</strong></a>
+				
+		<div id="sideNav" href="">
+		<i class="fa fa-bars icon"></i> 
+		</div>
+            </div>
+
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+
+                    <li>
+                        <a class="active-menu" href="dashboard.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="desglose-creditos.html"> Desglose de Créditos</a>
+                    </li>
+                    <li>
+                        <a href="alta-constancias.html">Alta de Constancia</a>
+                    </li>
+                    <li>
+                        <a href="login.html"> Salir</a>
+                    </li>
+                </ul>
+
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+      
+		<div id="page-wrapper">
+		  <div class="header"> 
+            <h1 class="page-header">
+                Liberación de electivas
+            </h1>
+            
+            <ol class="breadcrumb">
+			  <li>Estado de liberacion de electivas</li>
+			</ol> 
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Estado de liberación de electivas
+                        </div>
+                        
+                        <div class="panel-body">
+                            <div class="panel panel-default" style="border-color: green; border-width: 0 0 0 10px;">
+                            <p>Electiva 1</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-success"  role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default" style="border-color: orange; border-width: 0 0 0 10px;">
+                            <p>Electiva 2</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                                </div>
+                            </div>
+                        </div>
+                            <div class="panel panel-default" style="border-color: red; border-width: 0 0 0 10px;">
+                            <p>Electiva 3</p>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 0.5%">
+                                </div>
+                            </div>
+                        </div>
+                                        <div class="panel-body">
+                                            <div class="panel-group" id="accordion">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">Inquietudes vocacionales propias</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseOne" class="panel-collapse in" style="height: auto;">
+                                                        <div class="panel-body">
+                                                            <div class="col-md-12">
+                                                                <!--   Basic Table  -->
+                                                               <div class="panel panel-default">
+                                                                   <div class="panel-body">
+                                                                       <div class="table-responsive">
+                                                                           <table class="table">
+                                                                               <thead>
+                                                                                   <tr>
+
+                                                                                       <th>Modalidad</th>
+                                                                                       <th style="text-align: center;">Ejemplos de actividades</th>
+                                                                                       <th>Créditos</th>
+                                                                                   </tr>
+                                                                               </thead>
+                                                                               <tbody>
+                                                                                   <tr>
+                                                                                       <td><p>Docencia</p></td>
+                                                                                       <td style="text-align: center;"><p>a) Cursos ofertados en las Unidades Académicas del IPN</p>
+                                                                                        <p>b) Estudio de una lengua extranjera que no se considere requisito de titulación</p>
+                                                                                       </td>
+                                                                                       <td><p>1 crédito
+                                                                                           por cada 16
+                                                                                           horas</p></td>
+                                                                                   </tr>
+                                                                               </tbody>
+                                                                           </table>
+                                                                       </div>
+                                                                   </div>
+                                                               </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Énfasis en la profesión</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseTwo" class="panel-collapse collapse" style="height: auto;">
+                                                        <div class="panel-body">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel panel-default">
+                                                    <div class="panel-heading">
+                                                        <h4 class="panel-title">
+                                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">Complementarias a la profesión</a>
+                                                        </h4>
+                                                    </div>
+                                                    <div id="collapseThree" class="panel-collapse collapse">
+                                                        <div class="panel-body">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+		</div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <div>
+    <script src="../plantilla_3/assets/js/jquery-1.10.2.js"></script>
+    <!-- Bootstrap Js -->
+    <script src="../plantilla_3/assets/js/bootstrap.min.js"></script>
+	 
+    <!-- Metis Menu Js -->
+    <script src="../plantilla_3/assets/js/jquery.metisMenu.js"></script>
+    <!-- Morris Chart Js -->
+    <script src="../plantilla_3/assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="../plantilla_3/assets/js/morris/morris.js"></script>
+    
+	
+	<script src="../plantilla_3/assets/js/easypiechart.js"></script>
+	<script src="../plantilla_3/assets/js/easypiechart-data.js"></script>
+	
+	 <script src="../plantilla_3/assets/js/Lightweight-Chart/jquery.chart.js"></script>
+	
+    <!-- Custom Js -->
+    <script src="../plantilla_3/assets/js/custom-scripts.js"></script>
+
+      
+    <!-- Chart Js -->
+    <script type="text/javascript" src="../plantilla_3/assets/js/Chart.min.js"></script>  
+    <script type="text/javascript" src="../plantilla_3/assets/js/chartjs.js"></script> 
+    </div>
+</body>
+</html>

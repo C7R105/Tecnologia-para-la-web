@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<!--<html xmlns="http://www.w3.org/1999/xhtml">-->
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta content="" name="description" />
+    <meta content="webthemez" name="author" />
+    <title>Alta de Constancias</title>
+	<!-- Bootstrap Styles-->
+    <link href="../plantilla_3/assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FontAwesome Styles-->
+    <link href="../plantilla_3/assets/css/font-awesome.css" rel="stylesheet" />
+     <!-- Morris Chart Styles-->
+     <!-- Custom Styles-->
+    <link href="../plantilla_3/assets/css/custom-styles.css" rel="stylesheet" />
+     <!-- Google Fonts-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+     <!-- TABLE STYLES-->
+    <link href="../plantilla_3/assets/js/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-default top-navbar" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><strong>Electivas</strong></a>
+				
+		<div id="sideNav" href="">
+		<i class="fa fa-bars icon"></i> 
+		</div>
+            </div>
+
+        </nav>
+        <!--/. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+<!--/. AQUI VAN TODAS LAS PAGINAS DEL EQUIPO -->
+                    <li>
+                        <a href="dashboard.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="desglose-creditos.html">Desglose de Créditos</a>
+                    </li>	
+                    <li>
+                        <a href="alta-constancias.html" class="active-menu">Alta de Constancia</a>
+                    </li>
+                    <li>
+                        <a href="login.html"> Salir</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  
+        <div id="page-wrapper" >
+		  <div class="header"> 
+                <h1 class="page-header">Constancias</h1>
+		</div>
+        -->
+		
+        <div id="page-wrapper">
+            <div class="header"> 
+              <h1 class="page-header">
+                Constancias
+              </h1>
+              
+              <ol class="breadcrumb">
+                <li>Alta de constancias</li>
+              </ol> 
+               
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Advanced Tables -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                             
+                             <ul class="nav nav-pills">      <!-- Referencia para la pagina de Charly -->
+
+                                <button style="float: right;" class="btn btn-success" data-toggle="modal" data-target="#myModal">
+                                    Nueva Constancia
+                                  </button>
+
+                             </ul>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                            <th>Nombre de la actividad</th>
+                                            <th>Fecha</th>
+                                            <th>Horas</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    </tbody>
+
+                                    <tfoot>
+                                        <tr>
+                                            <th>Nombre de la actividad</th>
+                                            <th>Fecha</th>
+                                            <th>Horas</th>
+                                            <th>Acciones</th>
+                                        </tr>
+                                    </tfoot>
+
+                                </table>
+                                <!--  Modals                     AQUI ESTA LA VENTANA MODAL DE "ALTA"              -->
+                            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title">Subir Constancia</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row"> <!--RENGLON 1-->
+                                                <div class="col-md-12"> <!--COLUMNA 1-->
+                                                    <div class="form-group">
+                                                        <label>Nombre de la actividad</label>
+                                                        <input type="text" class="form-control" id="nombre_actividad_create" placeholder="Digite nombre de la actividad">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row"> <!--RENGLON 2-->
+                                                <div class="col-md-6"> <!--COLUMNA 1-->
+                                                    <div class="form-group">
+                                                        <label>Fecha de inicio</label>
+                                                        <input type="date" class="form-control" id="fecha_inicio_create">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6"> <!--COLUMNA 2-->
+                                                    <div class="form-group">
+                                                        <label>Fecha de termino</label>
+                                                        <input type="date" class="form-control" id="fecha_termino_create">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row"> <!--RENGLON 3-->
+                                                <div class="col-md-3"> <!--COLUMNA 1-->
+                                                    <div class="form-group">
+                                                        <label>Horas</label>
+                                                        <input type="number" class="form-control" id="horas_create" min="0" value="0">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row"> <!--RENGLON 4-->
+                                                <div class="col-md-6"> <!--COLUMNA 1-->
+                                                    <div class="form-group">
+                                                        <label>Archivo (solo una constancia y en .pdf)</label>
+                                                        <input type="file" class="form-control" id="archivo_create">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row"> <!--RENGLON 5-->
+                                                <div class="col-md-12"> <!--COLUMNA 1-->
+                                                    <div class="form-group">
+                                                        <label>Observaciones</label>
+                                                        <textarea class="form-control" rows="6" id="observaciones_create" placeholder="Ingrese las observaciones que considere necesarias"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-success" onclick="actionCreate();">Guardar</button>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                     <!--                               End Modals                          -->
+
+                     <!--  Modals                     AQUI ESTA LA VENTANA MODAL DE "MODIFICACION"              -->
+
+                            <div class="modal fade" id="modal-lg-actualizar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title">Actualizar Constancia</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row"> <!--RENGLON 1-->
+                                                <div class="col-md-12"> <!--COLUMNA 1-->
+                                                    <div class="form-group">
+                                                        <label>Nombre de la actividad</label>
+                                                        <input type="text" class="form-control" id="nombre_actividad_update">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row"> <!--RENGLON 2-->
+                                                <div class="col-md-6"> <!--COLUMNA 1-->
+                                                    <div class="form-group">
+                                                        <label>Fecha de inicio</label>
+                                                        <input type="date" class="form-control" id="fecha_inicio_update">
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6"> <!--COLUMNA 2-->
+                                                    <div class="form-group">
+                                                        <label>Fecha de termino</label>
+                                                        <input type="date" class="form-control" id="fecha_fin_update">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row"> <!--RENGLON 3-->
+                                                <div class="col-md-3"> <!--COLUMNA 1-->
+                                                    <div class="form-group">
+                                                        <label>Horas</label>
+                                                        <input type="number" class="form-control" id="horas_update" min="0">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row"> <!--RENGLON 4-->
+                                                <div class="col-md-6"> <!--COLUMNA 1-->
+                                                    <div class="form-group">
+                                                        <label>Archivo (solo una constancia y en .pdf)</label>
+                                                        <input type="file" class="form-control" id="archivo_update">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row"> <!--RENGLON 5-->
+                                                <div class="col-md-12"> <!--COLUMNA 1-->
+                                                    <div class="form-group">
+                                                        <label>Observaciones</label>
+                                                        <textarea class="form-control" rows="6" id="observaciones_update" placeholder="Ingrese las observaciones que considere necesarias"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal-footer justify-content-between">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-success" onclick="actionUpdate();">Guardar</button>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                     <!--                               End Modals                          -->
+
+                     <!--  Modals                     AQUI ESTA LA VENTANA MODAL DE "ELIMINAR"              -->
+                     <div class="modal fade" id="Modal-Eliminar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" >Eliminar Constancia</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <p>¿Deseas realmente eliminar el registro?</p>
+                                    <div class="modal-footer justify-content-between">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                        <button type="button" class="btn btn-danger" onclick="actionDelete();">Eliminar</button>
+                                      </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!--                               End Modals                          -->
+                            </div>
+                        </div>
+                    </div>
+                    <!--End Advanced Tables -->
+                </div>
+            </div>
+                <!-- /. ROW  -->
+        </div>
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+     <!-- /. WRAPPER  -->
+    <!-- JS Scripts-->
+    <!-- jQuery Js -->
+    <div>
+    <script src="../plantilla_3/assets/js/jquery-1.10.2.js"></script>
+      <!-- Bootstrap Js -->
+    <script src="../plantilla_3/assets/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Js -->
+    <script src="../plantilla_3/assets/js/jquery.metisMenu.js"></script>
+     <!-- DATA TABLE SCRIPTS -->
+    <script src="../plantilla_3/assets/js/dataTables/jquery.dataTables.js"></script>
+    <script src="../plantilla_3/assets/js/dataTables/dataTables.bootstrap.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dataTables-example').dataTable();
+            });
+    </script>
+         <!-- Custom Js -->
+    <!--<script src="../plantilla_3/assets/js/custom-scripts.js"></script>-->
+    <script src="js/crud-constancias.js"></script>
+
+    <script>
+        $(document).ready(function () {//el signo de pesos significa que estamos utilizando una funcion JQ
+            $('#dataTables-example').DataTable();
+        });
+      </script>
+      
+      <script>//Las funciones JQuery deben ir por encima de su archivo script, sino no funcionan
+      $( document ).ready(function() {
+      actionRead();
+      });
+      </script>
+
+    </div>
+</body>
+</html>
